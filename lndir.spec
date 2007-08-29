@@ -41,6 +41,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %{_bindir}/lndir
-%{_mandir}/man1/lndir.*.bz2
+%{_mandir}/man1/lndir.*
 
 
