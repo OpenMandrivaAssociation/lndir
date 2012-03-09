@@ -1,12 +1,11 @@
 Name: lndir
-Version: 1.0.2
-Release: %mkrel 2
+Version: 1.0.3
+Release: 1
 Summary: Create a shadow directory of symbolic links to another directory tree
 Group: System/X11
 URL: http://xorg.freedesktop.org
-Source: http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.bz2
+Source0: http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.bz2
 License: MIT
-BuildRoot: %{_tmppath}/%{name}-root
 
 BuildRequires: x11-util-macros >= 1.0.1
 BuildRequires: x11-proto-devel
@@ -31,14 +30,9 @@ in the shadow directory are just symlinks to the real files.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %{_bindir}/lndir
 %{_mandir}/man1/lndir.*
 
