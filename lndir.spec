@@ -1,11 +1,11 @@
 Summary:	Create a shadow directory of symbolic links to another directory tree
 Name:		lndir
-Version:	1.0.3
-Release:	10
+Version:	1.0.4
+Release:	1
 Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
-Source0:	http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(xorg-macros) >= 1.0.1
 BuildRequires:	pkgconfig(xproto)
@@ -21,18 +21,19 @@ and the object files will be in the shadow directory, while the source files
 in the shadow directory are just symlinks to the real files.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-%configure2_5x \
+%configure \
 	--x-includes=%{_includedir} \
 	--x-libraries=%{_libdir}
-%make
+
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_bindir}/lndir
-%{_mandir}/man1/lndir.*
+%doc %{_mandir}/man1/lndir.*
 
