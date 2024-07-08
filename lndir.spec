@@ -1,7 +1,7 @@
 Summary:	Create a shadow directory of symbolic links to another directory tree
 Name:		lndir
-Version:	1.0.4
-Release:	2
+Version:	1.0.5
+Release:	1
 Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
