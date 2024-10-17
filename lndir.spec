@@ -4,7 +4,7 @@ Version:	1.0.5
 Release:	1
 Group:		System/X11
 License:	MIT
-Url:		http://xorg.freedesktop.org
+Url:		https://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(xorg-macros) >= 1.0.1
